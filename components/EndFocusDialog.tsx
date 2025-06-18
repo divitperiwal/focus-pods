@@ -1,12 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogFooter,
-} from "./ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogFooter } from "./ui/dialog";
 import { Button } from "./ui/button";
 
 interface EndFocusDialogProps {
@@ -23,11 +18,7 @@ const moods = [
   { emoji: "😄", label: "Highly Focused" },
 ];
 
-const EndFocusDialog: React.FC<EndFocusDialogProps> = ({
-  open,
-  onConfirm,
-  onClose,
-}) => {
+const EndFocusDialog = ({ open, onConfirm, onClose } : EndFocusDialogProps) => {
   const [selectedMood, setSelectedMood] = useState<number | null>(null);
 
   return (
@@ -55,10 +46,18 @@ const EndFocusDialog: React.FC<EndFocusDialogProps> = ({
         </div>
 
         <DialogFooter className="mt-4 flex justify-end gap-2">
-          <Button variant="outline" onClick={onClose}  className="cursor-pointer">
+          <Button
+            variant="outline"
+            onClick={onClose}
+            className="cursor-pointer"
+          >
             Cancel
           </Button>
-          <Button onClick={onConfirm} disabled={selectedMood === null} className="cursor-pointer">
+          <Button
+            onClick={onConfirm}
+            disabled={selectedMood === null}
+            className="cursor-pointer"
+          >
             Submit
           </Button>
         </DialogFooter>
