@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Instrument_Sans } from "next/font/google";
+import { Instrument_Sans, JetBrains_Mono, Roboto_Condensed, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
 const InterSans = Instrument_Sans({
@@ -7,6 +7,18 @@ const InterSans = Instrument_Sans({
   weight: ["400", "500", "600", "700"],
   display: "swap",
   variable: "--font-inter-sans",
+});
+
+const JetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-jetbrains-mono",
+});
+
+const RobotoCondensed = Roboto_Condensed({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-roboto-condensed",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${InterSans.className} antialiased `}
+        className={`${InterSans.className} ${JetBrainsMono.variable} ${RobotoCondensed.variable} antialiased bg-gradient-to-br from-[#eef4ff] via-[#f1f5ff] to-[#f5f3ff]
+
+ min-h-screen `}
       >
         {children}
       </body>

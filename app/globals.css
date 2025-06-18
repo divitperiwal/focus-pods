@@ -119,3 +119,19 @@
   }
 }
 
+.font-jetbrains {
+  font-family: var(--font-jetbrains-mono);
+}
+
+.font-roboto-condensed {
+  font-family: var(--font-roboto-condensed);
+}
+
+@layer utilities {
+  .word-spacing-relaxed {
+    word-spacing: 0.25rem;
+  }
+  .word-spacing-wide {
+    word-spacing: 0.rem;
+  }
+}
