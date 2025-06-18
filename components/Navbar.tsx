@@ -21,7 +21,7 @@ const Navbar = () => {
         </Link>
 
         <Button className="bg-white hover:bg-white text-black cursor-pointer hover:shadow-md transition-all duration-200 select-none sm:hidden border-gray-300 border-2 rounded-full">
-          Login / SignUp
+          Login / Signup
         </Button>
       </div>
 

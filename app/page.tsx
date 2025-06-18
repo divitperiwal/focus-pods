@@ -17,7 +17,7 @@ const Home = () => {
           </span>
 
           <div className="flex flex-wrap gap-4 mt-4">
-            <Link href={"/web-player"}>
+            <Link href={"/web-player"} className="w-full sm:w-auto">
               <Button className="cursor-pointer bg-gradient-to-r from-[#00e0ff] via-[#3b82f6] to-[#6366f1] text-base h-14 sm:h-16 w-full sm:w-56 rounded-full select-none">
                 Generate Focus Music
               </Button>

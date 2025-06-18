@@ -134,4 +134,17 @@
   .word-spacing-wide {
     word-spacing: 0.rem;
   }
+   @keyframes loader-bar {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-loader-bar {
+    animation: loader-bar 1.5s ease-in-out infinite;
+  }
 }
+
