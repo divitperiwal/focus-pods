@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, JetBrains_Mono, Roboto_Condensed, Roboto_Mono } from "next/font/google";
+import {
+  Instrument_Sans,
+  JetBrains_Mono,
+  Roboto_Condensed,
+  Roboto_Mono,
+} from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const InterSans = Instrument_Sans({
   subsets: ["latin"],
@@ -42,6 +48,7 @@ export default function RootLayout({
 
  min-h-screen `}
       >
+        <Navbar />
         {children}
       </body>
     </html>
