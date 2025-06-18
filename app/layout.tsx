@@ -47,3 +47,6 @@ export default function RootLayout({
     </html>
   );
 }
+
+//bg-gradient-to-br from-[#111827] via-[#1f2937] to-[#374151]
+//bg-gradient-to-br from-[#eef4ff] via-[#f1f5ff] to-[#f5f3ff]
