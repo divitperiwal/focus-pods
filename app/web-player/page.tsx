@@ -2,6 +2,7 @@
 
 import Loader from "@/components/Loader";
 import OptionCards from "@/components/OptionCards";
+import SongPlayer from "@/components/SongPlayer";
 import { Button } from "@/components/ui/button";
 import { useMusicSetup } from "@/store/useMusicSetup";
 import { useState } from "react";
@@ -16,6 +17,7 @@ const WebPlayer = () => {
     setDuration,
   } = useMusicSetup();
   const [isLoading, setisLoading] = useState(false);
+  const [isSongGenerated, setisSongGenerated] = useState(false);
   const isAllSelected = selectedFocus && selectedGenre && selectedDuration;
 
   const focusOptions = [
@@ -30,11 +32,16 @@ const WebPlayer = () => {
   const genreOptions = ["Lo-fi", "Ambient", "Nature", "Classical"];
   const durationOptions = ["1 min", "5 min", "15 min", "30 min", "45 min"];
 
-  const handleGenerateMusic = () => {
+  const handleGenerateMusic = async () => {
     setisLoading(true);
+    await setTimeout(() => {
+      setisSongGenerated(true);
+      setisLoading(false);
+    }, 3000);
   };
 
   if (isLoading) return <Loader />;
+  if (isSongGenerated) return <SongPlayer />;
   return (
     <main>
       <section className="flex flex-col lg:flex-row items-center justify-between w-[90%] m-auto mt-12 gap-8 px-4">
@@ -74,7 +81,6 @@ const WebPlayer = () => {
               ))}
             </div>
           </div>
-
 
           <div className="flex flex-col items-start justify-center mt-4 gap-2 w-full">
             <h1 className="text-2xl font-bold">Duration</h1>

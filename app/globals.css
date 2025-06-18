@@ -146,5 +146,15 @@
   .animate-loader-bar {
     animation: loader-bar 1.5s ease-in-out infinite;
   }
+
+  @keyframes loader-progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 }
 
