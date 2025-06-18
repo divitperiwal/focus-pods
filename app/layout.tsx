@@ -3,7 +3,6 @@ import {
   Instrument_Sans,
   JetBrains_Mono,
   Roboto_Condensed,
-  Roboto_Mono,
 } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
