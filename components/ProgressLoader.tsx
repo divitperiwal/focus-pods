@@ -38,13 +38,12 @@ const ProgressLoader: React.FC<ProgressLoaderProps> = ({ duration }) => {
 
   return (
     <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl px-2">
-      {/* Time Display */}
+
       <div className="flex justify-between text-xs sm:text-sm text-gray-300 font-mono mb-2 px-1">
         <span>{formatTime(elapsed)}</span>
         <span>{formatTime(duration)}</span>
       </div>
 
-      {/* Progress Bar */}
       <div className="w-full h-2 bg-gray-600 rounded-full overflow-hidden relative">
         <div
           className="absolute left-0 top-0 h-full bg-blue-500 rounded-full"

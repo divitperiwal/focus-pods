@@ -16,7 +16,7 @@ const Loader = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentQuote((prev) => (prev + 1) % quotes.length);
-    }, 3500);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);

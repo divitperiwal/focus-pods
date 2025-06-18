@@ -25,7 +25,7 @@ const LiveClock = () => {
         setTime(getFormattedTime());
       }, 60 * 1000);
 
-      // Clear interval on unmount
+
       return () => clearInterval(interval);
     }, msUntilNextMinute);
 

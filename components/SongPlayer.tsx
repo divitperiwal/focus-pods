@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 const SongPlayer = () => {
   const router = useRouter();
   const { selectedDuration } = useMusicSetup();
-  const duration = TimeStringtoNumber(selectedDuration || "1"); // fallback to 1 min
+  const duration = TimeStringtoNumber(selectedDuration || "1"); 
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
