@@ -27,12 +27,24 @@ const RobotoCondensed = Roboto_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "FocusPods - AI-Generated Music for Deep Work & Flow ",
+  title: "FocusPods - AI-Generated Music for Deep Work & Flow",
   description:
     "Eliminate distractions and stay in flow. FocusPods creates AI-generated ambient music synced with a Pomodoro timer for coding, writing, and deep work.",
   keywords:
-    "focus music, AI music, Pomodoro timer, deep work, productivity app, ambient music for work",
+    "focus music, AI music, productivity music, ambient sound, Pomodoro, deep work",
+  authors: [{ name: "Divit Periwal" }],
   creator: "Divit Periwal",
+  openGraph: {
+    title: "FocusPods - Music to Stay in Flow",
+    description:
+      "Experience AI-generated soundtracks for your productivity sessions.",
+    url: "https://focus-pods.vercel.app",
+    siteName: "FocusPods",
+    type: "website",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
