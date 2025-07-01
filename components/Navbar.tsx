@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import Image from "next/image";
 import React from "react";
@@ -39,10 +39,11 @@ const Navbar = () => {
             Generate Focus Music
           </Button>
         </Link>
-
-        <Button className="bg-white hover:bg-white text-black cursor-pointer hover:shadow-md transition-all duration-200 select-none">
-          Login / SignUp
-        </Button>
+        <Link href={"/sign-in"}>
+          <Button className="bg-white hover:bg-white text-black cursor-pointer hover:shadow-md transition-all duration-200 select-none">
+            Login / SignUp
+          </Button>
+        </Link>
       </div>
     </motion.nav>
   );

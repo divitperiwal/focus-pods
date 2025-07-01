@@ -59,7 +59,7 @@ export default function RootLayout({
 
  min-h-screen `}
       >
-        <Navbar />
+        
         {children}
       </body>
     </html>

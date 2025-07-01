@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import { cn } from "@/lib/utils"; 
+import { cn } from "@/lib/utils";
+import { cardVariants } from "@/constant/animation";
+import { motion } from "framer-motion";
 
 interface OptionCardProps {
   label: string;
@@ -9,9 +11,15 @@ interface OptionCardProps {
   onClick?: () => void;
 }
 
-const OptionCards = ({ label, imageurl, selected, onClick }: OptionCardProps) => {
+const OptionCards = ({
+  label,
+  imageurl,
+  selected,
+  onClick,
+}: OptionCardProps) => {
   return (
-    <div
+    <motion.div
+      variants={cardVariants}
       onClick={onClick}
       className={cn(
         "flex flex-col items-center justify-center gap-4 bg-white p-4 rounded-lg shadow-md cursor-pointer w-full sm:w-[200px] transition-all duration-200 select-none border-2",
@@ -32,7 +40,7 @@ const OptionCards = ({ label, imageurl, selected, onClick }: OptionCardProps) =>
         )}
         <span className="text-base font-semibold">{label}</span>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -4,40 +4,11 @@ import { motion } from "motion/react"
 import FeatureCarousel from "@/components/FeatureCarousel";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-
-const staggerContainer = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.4,
-      delayChildren: 0.8,
-    },
-  },
-};
-
-const fadeLeft = {
-  hidden: { opacity: 0, x: -50 },
-  show: { opacity: 1, x: 0, transition: { duration: 0.8 } },
-};
-
-const zoomIn = {
-  hidden: { opacity: 0, scale: 0.95 },
-  show: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
-};
-
-const popIn = {
-  hidden: { opacity: 0, scale: 0.8 },
-  show: { opacity: 1, scale: 1, transition: { duration: 0.4 } },
-};
-
-const slideUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7 } },
-};
+import { HomeStaggerContainer, fadeLeft, zoomIn, popIn, slideUp } from "@/constant/animation";
 
 const Home = () => {
   return (
-    <motion.main variants={staggerContainer} initial="hidden" animate="show">
+    <motion.main variants={HomeStaggerContainer} initial="hidden" animate="show">
       <section className="flex flex-col lg:flex-row items-center justify-between w-[90%] m-auto mt-12 gap-8 px-4">
         <div className="flex flex-col items-start justify-center gap-8 w-full lg:w-[60%]">
           <motion.div
@@ -55,7 +26,6 @@ const Home = () => {
             AI-generated focus music, personalized for your flow
           </motion.span>
 
-          {/* Buttons */}
           <div className="flex flex-wrap gap-4 mt-4">
             <motion.div variants={popIn} className="w-full sm:w-auto">
               <Link href={"/web-player"}>
@@ -72,14 +42,12 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Right Side Image */}
         <motion.div
-          variants={slideUp}
+          variants={slideUp}  
           className="hidden lg:block w-full lg:w-[40%]"
         ></motion.div>
       </section>
 
-      {/* Carousel Section */}
       <section className="w-[90%] mx-auto mt-18 px-4">
         <FeatureCarousel />
       </section>
